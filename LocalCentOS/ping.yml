@@ -8,7 +8,7 @@
       debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
       
     - name: install the latest version of selinux package
-      yum:
+      dnf:
         name: 
           - policycoreutils
           - policycoreutils-python
