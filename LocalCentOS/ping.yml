@@ -16,4 +16,4 @@
       selinux:
         policy: targeted
         state: permissive
-      beome: true
+      become: true
