@@ -13,6 +13,6 @@
         state: latest
       become: true
     - name: Put SELinux in permissive mode, logging actions that would be blocked.
-        selinux:
+      selinux:
         policy: targeted
         state: permissive
