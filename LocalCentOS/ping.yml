@@ -1,6 +1,6 @@
--name: Pinging and Ponging
- hosts: all
- tasks:
+---
+- hosts: all
+  tasks:
    - name: Ping and pong   
      debug:   
      ping:
