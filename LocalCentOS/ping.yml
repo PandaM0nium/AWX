@@ -10,10 +10,9 @@
           - setools
           - setools-console
           - setroubleshoot
-          - policycoureutils-python
         state: latest
       become: true
-#   - name: Put SELinux in permissive mode, logging actions that would be blocked.
-#       selinux:
-#       policy: targeted
-#       state: permissive
+    - name: Put SELinux in permissive mode, logging actions that would be blocked.
+        selinux:
+        policy: targeted
+        state: permissive
