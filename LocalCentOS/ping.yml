@@ -25,9 +25,9 @@
        dest: /usr/share/nginx/html/index.html
        
     - name: Start Nginx
-      service:
+      systemd:
        name: nginx
-       state: started
+       state: restarted
 #    - name: Put SELinux in permissive mode, logging actions that would be blocked.
 #      selinux:
 #        policy: targeted
