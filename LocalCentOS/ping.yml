@@ -27,6 +27,7 @@
     - name: Start Nginx
       service:
        name: nginx
+       enabled: yes
        state: started
 #    - name: Put SELinux in permissive mode, logging actions that would be blocked.
 #      selinux:
