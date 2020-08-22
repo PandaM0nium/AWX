@@ -12,6 +12,7 @@
           - setools-console
           - setroubleshoot
         state: latest
+        become_user: root
 #   - name: Put SELinux in permissive mode, logging actions that would be blocked.
 #       selinux:
 #       policy: targeted
