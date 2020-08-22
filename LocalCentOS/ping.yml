@@ -1,6 +1,5 @@
 ---
 - hosts: all
   tasks:
-   - name: Ping and pong   
-     debug:   
-     ping:
+    - name: test connection
+      ping:
