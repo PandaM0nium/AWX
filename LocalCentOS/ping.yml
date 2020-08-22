@@ -3,7 +3,16 @@
   tasks:
     - name: test connection
       ping:
-    - name: Put SELinux in permissive mode, logging actions that would be blocked.
-      selinux:
-        policy: targeted
-        state: permissive
+    - name: install the latest version of selinux package
+      yum:
+        name: 
+          - policycoreutils
+          - policycoreutils-python
+          - setools
+          - setools-console
+          - setroubleshoot
+        state: present
+#   - name: Put SELinux in permissive mode, logging actions that would be blocked.
+#       selinux:
+#       policy: targeted
+#       state: permissive
