@@ -12,8 +12,8 @@
           - setroubleshoot
         state: latest
       become: True
-    - name: Put SELinux in permissive mode, logging actions that would be blocked.
-      selinux:
-        policy: targeted
-        state: permissive
-      become: True
+#    - name: Put SELinux in permissive mode, logging actions that would be blocked.
+#      selinux:
+#        policy: targeted
+#        state: permissive
+#      become: True
