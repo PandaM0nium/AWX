@@ -3,8 +3,10 @@
   tasks:
     - name: test connection
       ping:  
+      
     - name: return ip address of remote host(s)
       debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+      
     - name: install the latest version of selinux package
       yum:
         name: 
@@ -12,8 +14,20 @@
           - setools
           - setools-console
           - setroubleshoot
+          - epel-release
+          - nginx
         state: latest
       become: True
+      
+    - name: add index.html file
+      template:
+       src: ./index.html
+       dest: /usr/share/nginx/html/index.html
+       
+    - name: Start Nginx
+      service:
+       name: nginx
+       state: started
 #    - name: Put SELinux in permissive mode, logging actions that would be blocked.
 #      selinux:
 #        policy: targeted
