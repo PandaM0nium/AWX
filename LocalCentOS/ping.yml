@@ -2,7 +2,9 @@
 - hosts: all
   tasks:
     - name: test connection
-      ping:
+      ping:  
+    - name: return ip address of remote host(s)
+      debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
     - name: install the latest version of selinux package
       yum:
         name: 
