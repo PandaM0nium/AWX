@@ -23,6 +23,7 @@
       template:
         src: ./index.html
         dest: /usr/share/nginx/html/index.html
+      become: True
        
     - name: Start Nginx
       service:
